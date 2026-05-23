@@ -13,7 +13,8 @@
 		
 		<p>
 		<!-- 入力チェックアノテーションにエラーがある場合 -->
-
+		<span th:errors="*{empId}"></span>
+		<span th:errors="*{empPass}"></span>
 		<!-- ログイン失敗の場合 -->
 			<span th:text="${errMessage}"></span>
 		</p>

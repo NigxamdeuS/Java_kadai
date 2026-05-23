@@ -7,9 +7,13 @@ import jakarta.validation.constraints.NotNull;
 public class LoginForm {
 	
 	/** 社員ID */
+	
+	@NotNull(message="社員IDを入力してください")
+	@Max(value = 99999, message = "社員IDは99999までの整数値で入力してください。")
 	private Integer empId;
 
 	/** パスワード */
+	@NotBlank(message = "パスワードを入力してください")
 	private String empPass;
 
 	/**
