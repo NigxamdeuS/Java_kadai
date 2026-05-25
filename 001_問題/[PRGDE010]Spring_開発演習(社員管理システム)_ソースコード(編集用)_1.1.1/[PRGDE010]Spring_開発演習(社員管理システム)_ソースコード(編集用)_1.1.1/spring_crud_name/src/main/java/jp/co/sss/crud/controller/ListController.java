@@ -26,5 +26,20 @@ public class ListController {
 
 		return "list/list";
 	}
+	
+	
 
+	@RequestMapping(path = "/list/empName", method = RequestMethod.GET)
+	public String search(String empName, Model model) {
+
+		List<Employee> employeeList = employeeRepository.findByEmpNameContaining(empName);
+
+		model.addAttribute("employees", employeeList);
+		
+		if (employeeList.isEmpty()) {
+			model.addAttribute("message", "該当する社員は存在しません。");
+		}
+
+		return "list/list";
+	}
 }

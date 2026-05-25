@@ -22,38 +22,42 @@
 				<div class="label">パスワード：</div>
 				<div class="input">
 					<input type="password" th:field="*{empPass}" />
+					<p th:errors="*{empPass}"></p>
 				</div>
 			</div>
 			<div class="form">
 				<div class="label">社員名：</div>
 				<div class="input">
 					<input type="text" th:field="*{empName}" />
+					<p th:errors="*{empName}"></p>
 				</div>
 			</div>
 			<div class="form">
 				<div class="label">性別：</div>
 				<div class="input">
 					<input type="radio" th:field="*{gender}" value="1" />男性
-			<input type="radio" th:field="*{gender}" value="2" />女性
+					<input type="radio" th:field="*{gender}" value="2" />女性
 				</div>
 			</div>
 			<div class="form">
 				<div class="label">住所：</div>
 				<div class="input">
 					<input type="text" th:field="*{address}" />
+					<p th:errors="*{address}"></p>
 				</div>
 			</div>
 			<div class="form">
 				<div class="label">生年月日：</div>
 				<div class="input">
 					<input type="text" th:field="*{birthday}" /> (YYYY/MM/DD)
+					<p th:errors="*{birthday}"></p>
 				</div>
 			</div>
 			<div class="form">
 				<div class="label">権限：</div>
 				<div class="input">
 					<input type="radio" th:field="*{authority}" value="1" />一般
-			<input type="radio" th:field="*{authority}" value="2" />管理者
+					<input type="radio" th:field="*{authority}" value="2" />管理者
 				</div>
 			</div>
 			<div class="form">

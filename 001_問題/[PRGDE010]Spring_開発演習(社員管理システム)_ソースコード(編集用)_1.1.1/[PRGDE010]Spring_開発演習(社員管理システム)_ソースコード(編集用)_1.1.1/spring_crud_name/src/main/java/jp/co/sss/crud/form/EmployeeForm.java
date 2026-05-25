@@ -4,31 +4,30 @@ import java.util.Date;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
 
 public class EmployeeForm {
 	/** 社員ID */
 	private Integer empId;
 
-	/** パスワード */
+	@NotBlank(message = "パスワードを入力してください")
 	private String empPass;
 
-	/** 社員名 */
+	@NotBlank(message = "社員名を入力してください")
 	private String empName;
 
-	/** 性別 */
+	@NotNull(message = "性別を選択してください")
 	private Integer gender;
 
-	/** 住所 */
+	@NotBlank(message = "住所を入力してください")
 	private String address;
 
-	/** 生年月日 */
+	@NotNull(message = "生年月日を入力してください")
 	private Date birthday;
 
-	/** 権限 */
+	@NotNull(message = "権限を選択してください")
 	private Integer authority;
 
-	/** 部署ID */
+	@NotNull(message = "部署を選択してください")
 	private Integer deptId;
 
 	/**
@@ -137,6 +136,8 @@ public class EmployeeForm {
 
 	/**
 	 * 生年月日のセット
+	 
+	 *
 	 *
 	 * @param birthday
 	 *            生年月日
